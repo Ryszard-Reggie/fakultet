@@ -210,8 +210,8 @@ for(let znak of string){console.log(znak);}		//	Ta pętla do tablic
 
 ## Wykład 2 - Fundamenty React'a
 
-[x] - Zainstalowany silnik **node.js**
-[x] - Folder projektu - _**React**_
+- [x] - Zainstalowany silnik **node.js**
+- [x] - Folder projektu - _**React**_
 
 Komendy w konsoli **Visual Studio Code** (_**CTRL + ~**_):
 * `npx -v` - sprawdzenie czy na komputerze jest paczka **npx** (powinna być automatycznie po zainstalowaniu **node.js**)
