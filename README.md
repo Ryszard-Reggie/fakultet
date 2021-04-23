@@ -207,3 +207,24 @@ const strin = 'test';
 for(let znak of string){console.log(znak);}		//	Ta pętla do tablic
 
 ```
+
+## Wykład 2 - Fundamenty React'a
+
+[x] - Zainstalowany silnik **node.js**
+[x] - Folder projektu - _**React**_
+
+Komendy w konsoli **Visual Studio Code** (_**CTRL + ~**_):
+* `npx -v` - sprawdzenie czy na komputerze jest paczka **npx** (powinna być automatycznie po zainstalowaniu **node.js**)
+* `npx create-react-app app --template typescript` - stworzenie projektu
+* `cd app` - przejście do folderu z aplikacją
+* `npm start` - uruchomienie projektu
+* `npm install` - instalacja pakietów dopisanych w pliku _package.json_, w sekcji _"dependencies"_
+
+Pliki:
+* _package.json_ - plik konfiguracyjny określający projekt (używane paczki, informacje o projekcie, itd.)
+* _App.tsx_ - główna część aplikacji
+
+Notatki:
+* React ma strukturę drzewa
+* Kożdy jeden **komponent** (np. **App**, **CustomHeader**, **Counter**, itd.) powinien zwracać maksymalnie jeden tag HMLT'a
+* Zakomentowanie zaznaczonej części kodu: _**CTRL + ?**_
