@@ -228,3 +228,17 @@ Notatki:
 * React ma strukturę drzewa
 * Kożdy jeden **komponent** (np. **App**, **CustomHeader**, **Counter**, itd.) powinien zwracać maksymalnie jeden tag HMLT'a
 * Zakomentowanie zaznaczonej części kodu: _**CTRL + ?**_
+
+## Wykład 3 - zarządanie (pod)stronami
+### Importy
+1. Importy z bibliotek zewnętrznych są na górze pliku
+2. Importy komponętów wewnątrz aplikacji są poniżej
+3. Importy CSS-ów i reszty są na dole
+
+### _react-router-dom_
+* **BrowserRouter** - pozwala na używanie historii, wyciąganie _:id_ podstron
+* **Switch** - przeskakiwanie pomiędzy **Route**
+* **Route** - podstrony
+
+### Sposoby definiowania **CSS-ów**
+* CSS in JS - pozwala tworzyć style w JSie - **_makeStyles_**
