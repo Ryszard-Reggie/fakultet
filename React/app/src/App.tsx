@@ -1,43 +1,65 @@
 import React from 'react';
 import logo from './logo.svg';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
+
+import Movie from './views/movie/Movie';
+import Home from './views/home/Home';
+import Page404 from './views/Page404/Page404';
+
 import './App.css';
 
-import CustomHeader, {addNumber} from './components/CustomHeader';
-import Counter from './components/Counter';
-
 const App = () => {
-  const addedNumber = addNumber(1, 2);
-
-  const [changedNumber, setChangedNumber] = React.useState(0);
-
-  const handleNumberChange = (newNumber: number) =>
-  {
-    console.log(newNumber);
-    return newNumber;
-  }
-
-  const liczbaMniejszaOdZera = (liczba: number) =>
-  {
-    if (liczba < 0)
-    {
-      return (<div>Liczba jest mniejsza od 0</div>)
-    }
-  }
-
   return (
     <div className="App">
-        <CustomHeader>
-          <Counter onNumberChange={handleNumberChange} />
-          {
-            changedNumber > 0 && (<div> liczba jest większa od 0</div>)
-          }
-          {
-            liczbaMniejszaOdZera(changedNumber)
-          }
-        </CustomHeader>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/movie/:id" component={Movie}/>
+          <Route path="*" component={Page404} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
+
+export default App;
+
+// import CustomHeader, {addNumber} from './components/CustomHeader';
+// import Counter from './components/Counter';
+
+// const App = () => {
+//   const addedNumber = addNumber(1, 2);
+
+//   const [changedNumber, setChangedNumber] = React.useState(0);
+
+//   const handleNumberChange = (newNumber: number) =>
+//   {
+//     console.log(newNumber);
+//     return newNumber;
+//   }
+
+//   const liczbaMniejszaOdZera = (liczba: number) =>
+//   {
+//     if (liczba < 0)
+//     {
+//       return (<div>Liczba jest mniejsza od 0</div>)
+//     }
+//   }
+
+//   return (
+//     <div className="App">
+//         <CustomHeader>
+//           <Counter onNumberChange={handleNumberChange} />
+//           {
+//             changedNumber > 0 && (<div> liczba jest większa od 0</div>)
+//           }
+//           {
+//             liczbaMniejszaOdZera(changedNumber)
+//           }
+//         </CustomHeader>
+//     </div>
+//   );
+// }
 
 // Funckja strzałkowa
 
@@ -85,7 +107,3 @@ const App = () => {
 //     </div>
 
 // );
-
-
-
-export default App;
