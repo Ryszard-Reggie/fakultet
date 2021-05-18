@@ -4,8 +4,9 @@ import NavPanel from '../../components/NavPanel';
 
 import { omdAPIKey } from '../../key';
 
-import http from '../../utils/http'
+// import http from '../../utils/http';
 
+import movieServices from '../../services/movies.services';
 
 const Home = () =>
 {
@@ -18,13 +19,15 @@ const Home = () =>
         {
             try
             {
-                const response = await <any>http.get('http://www.omdbapi.com/',
-                {
-                    apikey: omdAPIKey,
-                    s: search,
-                    plot: 'full',
-                });
-                setMovie(response);
+                const response = movieServices.searchByName(search, 1);
+
+                // const response = await <any>http.get('http://www.omdbapi.com/',
+                // {
+                //     apikey: omdAPIKey,
+                //     s: search,
+                //     plot: 'full',
+                // });
+                // setMovie(response);
             }
             catch (error)
             {
