@@ -242,3 +242,8 @@ Notatki:
 
 ### Sposoby definiowania **CSS-ów**
 * CSS in JS - pozwala tworzyć style w JSie - **_makeStyles_**
+
+## Wykład 4 - Request'y
+1. Poprawna obsługa zapytań - metoda **fetch**
+2. Obsaługa konkretnego API/Serwera
+
