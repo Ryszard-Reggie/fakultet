@@ -247,3 +247,10 @@ Notatki:
 1. Poprawna obsługa zapytań - metoda **fetch**
 2. Obsaługa konkretnego API/Serwera
 
+## Wykład 5 - Redux
+* Redux - sposób na globalne przechowywanie danych w React'cie i reaktywna reakcja na zmiany stanu - przeładowanie danej sekcji kody po wykonaniu konkretnych operacji
+
+1. Store
+2. Akcje
+3. Reduce'ry
+4. Selektory
