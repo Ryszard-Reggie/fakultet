@@ -1,10 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 import Movie from './views/movie/Movie';
 import Home from './views/home/Home';
 import Page404 from './views/Page404/Page404';
+import store from './store';      // Plik 'index.ts' jest plikiem domyślnym
 
 import './App.css';
 
@@ -12,11 +14,13 @@ const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
-        <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/movie/:id" component={Movie}/>
-          <Route path="*" component={Page404} />
-        </Switch>
+        <Provider store={store}>
+          <Switch>
+            <Route path="/" component={Home} exact />
+            <Route path="/movie/:id" component={Movie}/>
+            <Route path="*" component={Page404} />
+          </Switch>
+        </Provider>
       </BrowserRouter>
     </div>
   );
