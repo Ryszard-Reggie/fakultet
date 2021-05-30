@@ -254,3 +254,5 @@ Notatki:
 2. Akcje
 3. Reduce'ry
 4. Selektory
+
+## Wykład 6
