@@ -256,3 +256,4 @@ Notatki:
 4. Selektory
 
 ## Wykład 6
+Kontynuacja wykładu 5
